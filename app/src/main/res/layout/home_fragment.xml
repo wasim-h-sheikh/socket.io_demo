@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/frameLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ui.fragment.HomeFragment">
+
+	<LinearLayout
+		android:id="@+id/layDisplay"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/layoutButtons"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="4dp"
+			android:weightSum="5">
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="3"
+				android:gravity="center"
+				android:text="@string/number"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_size_normal" />
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/latest"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_size_normal" />
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:text="@string/sum"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_size_normal" />
+		</LinearLayout>
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			app:cardCornerRadius="8dp"
+			app:cardElevation="4dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="75dp"
+				android:gravity="center_vertical"
+				android:weightSum="5">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="3"
+					android:gravity="center"
+					android:text="@string/odd_number"
+					android:textColor="@color/black"
+					android:textSize="@dimen/text_size_normal" />
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="match_parent"
+					android:background="@color/silver" />
+
+				<TextView
+					android:id="@+id/tvLatestOddNumber"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="5"
+					android:textColor="@color/red"
+					android:textSize="@dimen/text_size_normal"
+					android:textStyle="bold" />
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="match_parent"
+					android:background="@color/silver" />
+
+				<TextView
+					android:id="@+id/tvOddNumberCounter"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="50"
+					android:textColor="@color/black"
+					android:textSize="@dimen/text_size_normal"
+					android:textStyle="bold" />
+			</LinearLayout>
+		</androidx.cardview.widget.CardView>
+
+		<androidx.cardview.widget.CardView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			app:cardCornerRadius="8dp"
+			app:cardElevation="4dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="75dp"
+				android:gravity="center_vertical"
+				android:weightSum="5">
+
+				<TextView
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="3"
+					android:gravity="center"
+					android:text="@string/even_number"
+					android:textColor="@color/black"
+					android:textSize="@dimen/text_size_normal" />
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="match_parent"
+					android:background="@color/silver" />
+
+				<TextView
+					android:id="@+id/tvLatestEvenNumber"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="5"
+					android:textColor="@color/green"
+					android:textSize="@dimen/text_size_normal"
+					android:textStyle="bold" />
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="match_parent"
+					android:background="@color/silver" />
+
+				<TextView
+					android:id="@+id/tvEvenNumberCounter"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="50"
+					android:textColor="@color/black"
+					android:textSize="@dimen/text_size_normal"
+					android:textStyle="bold" />
+			</LinearLayout>
+		</androidx.cardview.widget.CardView>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/layoutButtons"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:padding="24dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/layDisplay"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/btnConnect"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:background="@color/green"
+			android:padding="8dp"
+			android:text="@string/connect"
+			android:textColor="@color/white"
+			android:textSize="@dimen/text_size_medium"
+			android:textStyle="bold" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/btnReconnect"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:background="@color/blue"
+			android:padding="8dp"
+			android:text="@string/reconnect"
+			android:textColor="@color/white"
+			android:textSize="@dimen/text_size_medium"
+			android:textStyle="bold" />
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/btnDisconnect"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="8dp"
+			android:background="@color/red"
+			android:padding="8dp"
+			android:text="@string/disconnect"
+			android:textColor="@color/white"
+			android:textSize="@dimen/text_size_medium"
+			android:textStyle="bold" />
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

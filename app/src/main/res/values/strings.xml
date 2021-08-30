@@ -1,0 +1,12 @@
+<resources>
+	<string name="app_name">Socket Demo</string>
+	<string name="number">Number</string>
+	<string name="latest">Latest</string>
+	<string name="sum">Sum</string>
+	<string name="odd_number">Odd Numbers</string>
+	<string name="connect">Connect</string>
+	<string name="disconnect">Disconnect</string>
+	<string name="reconnect">Reconnect</string>
+	<string name="even_number">Even Number</string>
+	<string name="connection_error">Network error</string>
+</resources>
