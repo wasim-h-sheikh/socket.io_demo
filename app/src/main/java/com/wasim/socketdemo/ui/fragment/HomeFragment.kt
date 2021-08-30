@@ -51,7 +51,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         updateUI()
     }
 
-    fun updateUI(){
+    private fun updateUI(){
 
         viewModel.getEvenNumberLiveData().observe(viewLifecycleOwner, Observer {
             binding.tvLatestEvenNumber.text=it.toString()
@@ -79,7 +79,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
         }
 
     }
-    fun vibrate(){
+    private fun vibrate(){
 
         vibrator.let {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -90,7 +90,7 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
             }
         }
     }
-    fun playBeep(){
+    private fun playBeep(){
         toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP, 200)
     }
 
